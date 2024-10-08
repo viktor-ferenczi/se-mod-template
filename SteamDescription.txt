@@ -1,0 +1,54 @@
+[h1]Mod Template[/h1]
+
+TODO: Describe your mod here, don't forget to change the title above. Copy this description to Steam when you publish your mod.
+
+[h2]How to use[/h2]
+[list]
+[*] Add this mod to your world.
+[*] ...
+[*] ...
+[/list]
+
+[h2]Compatibility[/h2]
+[list]
+[*] Works in both single and multiplayer.
+[*] Works in both creative and survival game.
+[/list]
+
+[h2]How to test[/h2]
+
+[b]Test world:[/b] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1234]TODO: Fix URL and title[/url]
+
+[b]Test blueprint:[/b] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1234]TODO: Fix URL and title[/url]
+
+[h2]Theory of operation[/h2]
+This mod 
+[list]
+[*] ...
+[*] ...
+[/list]
+
+[h2]Configuration[/h2]
+The mod generates a [code]ModTemplate.ini[/code] file under the [code]Storage[/code] folder of your world when it is first loaded. 
+Look into that file for documentation of all settings. 
+Uncomment the settings you want to change, the ones with default values are written as commented out (#).
+
+[h2]Known issues[/h2]
+[list]
+[*] ...
+[*] ...
+[/list]
+
+[h2]Troubleshooting[/h2]
+[list]
+[*] ...
+[*] ...
+[/list]
+
+[h2]Source code[/h2]
+[url=https://github.com/your-username/mod-repo-name]GitHub Repository[/url]
+
+[h2]Support / Help[/h2]
+[list]
+[*] [url=https://discord.gg/XYZ]Your Discord Server[/url]
+[/list]

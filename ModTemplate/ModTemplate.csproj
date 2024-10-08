@@ -1,0 +1,263 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props"
+            Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')"/>
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+        <ProjectGuid>{F7EA06E6-FC5B-4777-AF67-D3E8BB9D24D2}</ProjectGuid>
+        <OutputType>Library</OutputType>
+        <AppDesignerFolder>Properties</AppDesignerFolder>
+        <RootNamespace>ModTemplate</RootNamespace>
+        <AssemblyName>ModTemplate</AssemblyName>
+        <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
+        <FileAlignment>512</FileAlignment>
+        <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+        <LangVersion>6</LangVersion>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+        <PlatformTarget>x64</PlatformTarget>
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>full</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>bin\Debug\</OutputPath>
+        <DefineConstants>DEBUG;TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+        <PlatformTarget>x64</PlatformTarget>
+        <DebugType>pdbonly</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>bin\Release\</OutputPath>
+        <DefineConstants>TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="CppNet">
+          <HintPath>..\ModSDK\Bin64_Profile\CppNet.dll</HintPath>
+        </Reference>
+        <Reference Include="DirectShowLib">
+          <HintPath>..\ModSDK\Bin64_Profile\DirectShowLib.dll</HintPath>
+        </Reference>
+        <Reference Include="EmptyKeys.UserInterface">
+          <HintPath>..\ModSDK\Bin64_Profile\EmptyKeys.UserInterface.dll</HintPath>
+        </Reference>
+        <Reference Include="EmptyKeys.UserInterface.Core">
+          <HintPath>..\ModSDK\Bin64_Profile\EmptyKeys.UserInterface.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="EOSSDK">
+          <HintPath>..\ModSDK\Bin64_Profile\EOSSDK.dll</HintPath>
+        </Reference>
+        <Reference Include="GameAnalytics.Mono">
+          <HintPath>..\ModSDK\Bin64_Profile\GameAnalytics.Mono.dll</HintPath>
+        </Reference>
+        <Reference Include="HavokWrapper">
+          <HintPath>..\ModSDK\Bin64_Profile\HavokWrapper.dll</HintPath>
+        </Reference>
+        <Reference Include="Microsoft.CodeAnalysis">
+          <HintPath>..\ModSDK\Bin64_Profile\Microsoft.CodeAnalysis.dll</HintPath>
+        </Reference>
+        <Reference Include="Microsoft.CodeAnalysis.CSharp">
+          <HintPath>..\ModSDK\Bin64_Profile\Microsoft.CodeAnalysis.CSharp.dll</HintPath>
+        </Reference>
+        <Reference Include="netstandard">
+          <HintPath>..\ModSDK\Bin64_Profile\netstandard.dll</HintPath>
+        </Reference>
+        <Reference Include="NLog">
+          <HintPath>..\ModSDK\Bin64_Profile\NLog.dll</HintPath>
+        </Reference>
+        <Reference Include="ProtoBuf.Net">
+          <HintPath>..\ModSDK\Bin64_Profile\ProtoBuf.Net.dll</HintPath>
+        </Reference>
+        <Reference Include="ProtoBuf.Net.Core">
+          <HintPath>..\ModSDK\Bin64_Profile\ProtoBuf.Net.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="RecastDetourWrapper">
+          <HintPath>..\ModSDK\Bin64_Profile\RecastDetourWrapper.dll</HintPath>
+        </Reference>
+        <Reference Include="RestSharp">
+          <HintPath>..\ModSDK\Bin64_Profile\RestSharp.dll</HintPath>
+        </Reference>
+        <Reference Include="Sandbox.Common">
+          <HintPath>..\ModSDK\Bin64_Profile\Sandbox.Common.dll</HintPath>
+        </Reference>
+        <Reference Include="Sandbox.Game">
+          <HintPath>..\ModSDK\Bin64_Profile\Sandbox.Game.dll</HintPath>
+        </Reference>
+        <Reference Include="Sandbox.Game.XmlSerializers">
+          <HintPath>..\ModSDK\Bin64_Profile\Sandbox.Game.XmlSerializers.dll</HintPath>
+        </Reference>
+        <Reference Include="Sandbox.Graphics">
+          <HintPath>..\ModSDK\Bin64_Profile\Sandbox.Graphics.dll</HintPath>
+        </Reference>
+        <Reference Include="Sandbox.RenderDirect">
+          <HintPath>..\ModSDK\Bin64_Profile\Sandbox.RenderDirect.dll</HintPath>
+        </Reference>
+        <Reference Include="SharpDX">
+          <HintPath>..\ModSDK\Bin64_Profile\SharpDX.dll</HintPath>
+        </Reference>
+        <Reference Include="SharpDX.D3DCompiler">
+          <HintPath>..\ModSDK\Bin64_Profile\SharpDX.D3DCompiler.dll</HintPath>
+        </Reference>
+        <Reference Include="SharpDX.Desktop">
+          <HintPath>..\ModSDK\Bin64_Profile\SharpDX.Desktop.dll</HintPath>
+        </Reference>
+        <Reference Include="SharpDX.Direct3D11">
+          <HintPath>..\ModSDK\Bin64_Profile\SharpDX.Direct3D11.dll</HintPath>
+        </Reference>
+        <Reference Include="SharpDX.DirectInput">
+          <HintPath>..\ModSDK\Bin64_Profile\SharpDX.DirectInput.dll</HintPath>
+        </Reference>
+        <Reference Include="SharpDX.DXGI">
+          <HintPath>..\ModSDK\Bin64_Profile\SharpDX.DXGI.dll</HintPath>
+        </Reference>
+        <Reference Include="SharpDX.XAudio2">
+          <HintPath>..\ModSDK\Bin64_Profile\SharpDX.XAudio2.dll</HintPath>
+        </Reference>
+        <Reference Include="SharpDX.XInput">
+          <HintPath>..\ModSDK\Bin64_Profile\SharpDX.XInput.dll</HintPath>
+        </Reference>
+        <Reference Include="SixLabors.Core">
+          <HintPath>..\ModSDK\Bin64_Profile\SixLabors.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="SixLabors.ImageSharp">
+          <HintPath>..\ModSDK\Bin64_Profile\SixLabors.ImageSharp.dll</HintPath>
+        </Reference>
+        <Reference Include="SpaceEngineers.Game">
+          <HintPath>..\ModSDK\Bin64_Profile\SpaceEngineers.Game.dll</HintPath>
+        </Reference>
+        <Reference Include="SpaceEngineers.ObjectBuilders">
+          <HintPath>..\ModSDK\Bin64_Profile\SpaceEngineers.ObjectBuilders.dll</HintPath>
+        </Reference>
+        <Reference Include="SpaceEngineers.ObjectBuilders.XmlSerializers">
+          <HintPath>..\ModSDK\Bin64_Profile\SpaceEngineers.ObjectBuilders.XmlSerializers.dll</HintPath>
+        </Reference>
+        <Reference Include="Steamworks.NET">
+          <HintPath>..\ModSDK\Bin64_Profile\Steamworks.NET.dll</HintPath>
+        </Reference>
+        <Reference Include="System"/>
+        <Reference Include="System.Buffers">
+          <HintPath>..\ModSDK\Bin64_Profile\System.Buffers.dll</HintPath>
+        </Reference>
+        <Reference Include="System.Collections.Immutable">
+          <HintPath>..\ModSDK\Bin64_Profile\System.Collections.Immutable.dll</HintPath>
+        </Reference>
+        <Reference Include="System.ComponentModel.Annotations">
+          <HintPath>..\ModSDK\Bin64_Profile\System.ComponentModel.Annotations.dll</HintPath>
+        </Reference>
+        <Reference Include="System.Core"/>
+        <Reference Include="System.Data"/>
+        <Reference Include="System.Data.SQLite">
+          <HintPath>..\ModSDK\Bin64_Profile\System.Data.SQLite.dll</HintPath>
+        </Reference>
+        <Reference Include="System.Memory">
+          <HintPath>..\ModSDK\Bin64_Profile\System.Memory.dll</HintPath>
+        </Reference>
+        <Reference Include="System.Numerics.Vectors">
+          <HintPath>..\ModSDK\Bin64_Profile\System.Numerics.Vectors.dll</HintPath>
+        </Reference>
+        <Reference Include="System.Reflection.Metadata">
+          <HintPath>..\ModSDK\Bin64_Profile\System.Reflection.Metadata.dll</HintPath>
+        </Reference>
+        <Reference Include="System.Runtime.CompilerServices.Unsafe">
+          <HintPath>..\ModSDK\Bin64_Profile\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+        </Reference>
+        <Reference Include="System.Text.Encoding.CodePages">
+          <HintPath>..\ModSDK\Bin64_Profile\System.Text.Encoding.CodePages.dll</HintPath>
+        </Reference>
+        <Reference Include="System.Threading.Tasks.Extensions">
+          <HintPath>..\ModSDK\Bin64_Profile\System.Threading.Tasks.Extensions.dll</HintPath>
+        </Reference>
+        <Reference Include="System.Xml"/>
+        <Reference Include="VRage">
+          <HintPath>..\ModSDK\Bin64_Profile\VRage.dll</HintPath>
+        </Reference>
+        <Reference Include="VRage.Ansel">
+          <HintPath>..\ModSDK\Bin64_Profile\VRage.Ansel.dll</HintPath>
+        </Reference>
+        <Reference Include="VRage.Audio">
+          <HintPath>..\ModSDK\Bin64_Profile\VRage.Audio.dll</HintPath>
+        </Reference>
+        <Reference Include="VRage.EOS">
+          <HintPath>..\ModSDK\Bin64_Profile\VRage.EOS.dll</HintPath>
+        </Reference>
+        <Reference Include="VRage.EOS.XmlSerializers">
+          <HintPath>..\ModSDK\Bin64_Profile\VRage.EOS.XmlSerializers.dll</HintPath>
+        </Reference>
+        <Reference Include="VRage.Game">
+          <HintPath>..\ModSDK\Bin64_Profile\VRage.Game.dll</HintPath>
+        </Reference>
+        <Reference Include="VRage.Game.XmlSerializers">
+          <HintPath>..\ModSDK\Bin64_Profile\VRage.Game.XmlSerializers.dll</HintPath>
+        </Reference>
+        <Reference Include="VRage.Input">
+          <HintPath>..\ModSDK\Bin64_Profile\VRage.Input.dll</HintPath>
+        </Reference>
+        <Reference Include="VRage.Library">
+          <HintPath>..\ModSDK\Bin64_Profile\VRage.Library.dll</HintPath>
+        </Reference>
+        <Reference Include="VRage.Math">
+          <HintPath>..\ModSDK\Bin64_Profile\VRage.Math.dll</HintPath>
+        </Reference>
+        <Reference Include="VRage.Math.XmlSerializers">
+          <HintPath>..\ModSDK\Bin64_Profile\VRage.Math.XmlSerializers.dll</HintPath>
+        </Reference>
+        <Reference Include="VRage.Mod.Io">
+          <HintPath>..\ModSDK\Bin64_Profile\VRage.Mod.Io.dll</HintPath>
+        </Reference>
+        <Reference Include="VRage.NativeAftermath">
+          <HintPath>..\ModSDK\Bin64_Profile\VRage.NativeAftermath.dll</HintPath>
+        </Reference>
+        <Reference Include="VRage.NativeWrapper">
+          <HintPath>..\ModSDK\Bin64_Profile\VRage.NativeWrapper.dll</HintPath>
+        </Reference>
+        <Reference Include="VRage.Network">
+          <HintPath>..\ModSDK\Bin64_Profile\VRage.Network.dll</HintPath>
+        </Reference>
+        <Reference Include="VRage.Platform.Windows">
+          <HintPath>..\ModSDK\Bin64_Profile\VRage.Platform.Windows.dll</HintPath>
+        </Reference>
+        <Reference Include="VRage.Render">
+          <HintPath>..\ModSDK\Bin64_Profile\VRage.Render.dll</HintPath>
+        </Reference>
+        <Reference Include="VRage.Render11">
+          <HintPath>..\ModSDK\Bin64_Profile\VRage.Render11.dll</HintPath>
+        </Reference>
+        <Reference Include="VRage.Scripting">
+          <HintPath>..\ModSDK\Bin64_Profile\VRage.Scripting.dll</HintPath>
+        </Reference>
+        <Reference Include="VRage.Steam">
+          <HintPath>..\ModSDK\Bin64_Profile\VRage.Steam.dll</HintPath>
+        </Reference>
+        <Reference Include="VRage.UserInterface">
+          <HintPath>..\ModSDK\Bin64_Profile\VRage.UserInterface.dll</HintPath>
+        </Reference>
+        <Reference Include="VRage.XmlSerializers">
+          <HintPath>..\ModSDK\Bin64_Profile\VRage.XmlSerializers.dll</HintPath>
+        </Reference>
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="Mod\Data\Scripts\ModTemplate\BaseConfig.cs" />
+        <Compile Include="Mod\Data\Scripts\ModTemplate\Config.cs" />
+        <Compile Include="Mod\Data\Scripts\ModTemplate\ModSessionComponent.cs" />
+        <Compile Include="Mod\Data\Scripts\ModTemplate\Util.cs" />
+        <Compile Include="Properties\AssemblyInfo.cs"/>
+    </ItemGroup>
+    <ItemGroup>
+      <Content Include="Mod\metadata.mod" />
+      <Content Include="Mod\thumb.jpg" />
+    </ItemGroup>
+    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
+    <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+         Other similar extension points exist, see Microsoft.Common.targets.
+    <Target Name="BeforeBuild">
+    </Target>
+    <Target Name="AfterBuild">
+    </Target>
+    -->
+    <PropertyGroup>
+        <PostBuildEvent>call "$(SolutionDir)\Deploy.bat" "$(ProjectDir)"</PostBuildEvent>
+    </PropertyGroup>
+</Project>
