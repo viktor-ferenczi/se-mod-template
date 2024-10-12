@@ -62,6 +62,7 @@
         <Reference Include="Microsoft.CodeAnalysis.CSharp">
           <HintPath>..\ModSDK\Bin64_Profile\Microsoft.CodeAnalysis.CSharp.dll</HintPath>
         </Reference>
+        <Reference Include="mscorlib" />
         <Reference Include="netstandard">
           <HintPath>..\ModSDK\Bin64_Profile\netstandard.dll</HintPath>
         </Reference>
@@ -138,11 +139,11 @@
           <HintPath>..\ModSDK\Bin64_Profile\Steamworks.NET.dll</HintPath>
         </Reference>
         <Reference Include="System"/>
-        <Reference Include="System.Buffers">
-          <HintPath>..\ModSDK\Bin64_Profile\System.Buffers.dll</HintPath>
+        <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+          <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
         </Reference>
-        <Reference Include="System.Collections.Immutable">
-          <HintPath>..\ModSDK\Bin64_Profile\System.Collections.Immutable.dll</HintPath>
+        <Reference Include="System.Collections.Immutable, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <HintPath>..\packages\System.Collections.Immutable.8.0.0\lib\net462\System.Collections.Immutable.dll</HintPath>
         </Reference>
         <Reference Include="System.ComponentModel.Annotations">
           <HintPath>..\ModSDK\Bin64_Profile\System.ComponentModel.Annotations.dll</HintPath>
@@ -152,17 +153,18 @@
         <Reference Include="System.Data.SQLite">
           <HintPath>..\ModSDK\Bin64_Profile\System.Data.SQLite.dll</HintPath>
         </Reference>
-        <Reference Include="System.Memory">
-          <HintPath>..\ModSDK\Bin64_Profile\System.Memory.dll</HintPath>
+        <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+          <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
         </Reference>
-        <Reference Include="System.Numerics.Vectors">
-          <HintPath>..\ModSDK\Bin64_Profile\System.Numerics.Vectors.dll</HintPath>
+        <Reference Include="System.Numerics" />
+        <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
         </Reference>
         <Reference Include="System.Reflection.Metadata">
           <HintPath>..\ModSDK\Bin64_Profile\System.Reflection.Metadata.dll</HintPath>
         </Reference>
-        <Reference Include="System.Runtime.CompilerServices.Unsafe">
-          <HintPath>..\ModSDK\Bin64_Profile\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+        <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
         </Reference>
         <Reference Include="System.Text.Encoding.CodePages">
           <HintPath>..\ModSDK\Bin64_Profile\System.Text.Encoding.CodePages.dll</HintPath>
@@ -248,6 +250,10 @@
     <ItemGroup>
       <Content Include="Mod\metadata.mod" />
       <Content Include="Mod\thumb.jpg" />
+    </ItemGroup>
+    <ItemGroup>
+      <None Include="App.config" />
+      <None Include="packages.config" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
