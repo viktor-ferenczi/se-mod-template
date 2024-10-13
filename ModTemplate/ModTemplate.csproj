@@ -255,6 +255,7 @@
         <Compile Include="Properties\AssemblyInfo.cs"/>
     </ItemGroup>
     <ItemGroup>
+      <Content Include="Mod\Data\EntityComponents.sbc" />
       <Content Include="Mod\metadata.mod" />
       <Content Include="Mod\thumb.jpg" />
     </ItemGroup>
