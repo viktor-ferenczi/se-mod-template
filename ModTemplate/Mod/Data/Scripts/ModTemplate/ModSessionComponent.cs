@@ -3,8 +3,8 @@ using VRage.Game.Components;
 // ReSharper disable once CheckNamespace
 namespace ModTemplate
 {
-    [MySessionComponentDescriptor(MyUpdateOrder.BeforeSimulation)]
     // ReSharper disable once ClassNeverInstantiated.Global
+    [MySessionComponentDescriptor(MyUpdateOrder.NoUpdate)]
     public class ModSessionComponent : MySessionComponentBase
     {
         public static Config Cfg;
