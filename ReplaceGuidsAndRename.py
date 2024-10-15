@@ -9,12 +9,13 @@ import re
 import sys
 import uuid
 
-DRY_RUN = False
+DRY_RUN = 1
 
 PT_MOD_NAME = r'^([A-Z][a-z_0-9]+)+$'
 RX_MOD_NAME = re.compile(PT_MOD_NAME)
 
 TEMPLATE_NAME = 'ModTemplate'
+TEMPLATE_NAME_WITH_SPACES = 'Mod Template'
 
 
 def generate_guid():
@@ -62,13 +63,16 @@ def main():
     mod_name = 'ModName' if DRY_RUN else input_mod_name()
     if not mod_name:
         return
+    
+    mod_name_with_spaces = re.compile('([A-Z])').subn(r' \1', mod_name)[0].lstrip()
 
     replacements = {
         TEMPLATE_NAME: mod_name,
+        TEMPLATE_NAME_WITH_SPACES: mod_name_with_spaces,
         'FAE04EC0-301F-11D3-BF4B-00C04F79EFBC': generate_guid().upper(),
         'F7EA06E6-FC5B-4777-AF67-D3E8BB9D24D2': generate_guid().upper(),
     }
-
+    
     def iter_paths():
         for dirpath, dirnames, filenames in os.walk('.'):
             if (
