@@ -9,7 +9,7 @@ import re
 import sys
 import uuid
 
-DRY_RUN = 1
+DRY_RUN = False
 
 PT_MOD_NAME = r'^([A-Z][a-z_0-9]+)+$'
 RX_MOD_NAME = re.compile(PT_MOD_NAME)
@@ -93,7 +93,7 @@ def main():
 
             for filename in filenames:
                 ext = filename.rsplit('.')[-1]
-                if ext in ('sln', 'csproj', 'cs', 'bat', 'md', 'txt'):
+                if ext in ('sln', 'csproj', 'cs', 'bat', 'md', 'txt', 'sbc'):
                     yield os.path.join(dirpath, filename)
 
     paths = list(iter_paths())
