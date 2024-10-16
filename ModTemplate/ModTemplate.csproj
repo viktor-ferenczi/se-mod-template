@@ -251,7 +251,7 @@
         <Compile Include="Mod\Data\Scripts\ModTemplate\Config.cs" />
         <Compile Include="Mod\Data\Scripts\ModTemplate\Constants.cs" />
         <Compile Include="Mod\Data\Scripts\ModTemplate\ModSessionComponent.cs" />
-        <Compile Include="Mod\Data\Scripts\ModTemplate\Util.cs" />
+        <Compile Include="Mod\Data\Scripts\ModTemplate\Utils.cs" />
         <Compile Include="Properties\AssemblyInfo.cs"/>
     </ItemGroup>
     <ItemGroup>

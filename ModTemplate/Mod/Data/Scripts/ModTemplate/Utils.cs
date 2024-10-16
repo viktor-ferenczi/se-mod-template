@@ -1,11 +1,10 @@
 using Sandbox.ModAPI;
-using VRage.Utils;
 using VRageMath;
 
 // ReSharper disable once CheckNamespace
 namespace ModTemplate
 {
-    public static class Util
+    public static class Utils
     {
         public static Config Cfg => ModSessionComponent.Cfg;
         
