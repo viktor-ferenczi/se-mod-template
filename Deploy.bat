@@ -1,10 +1,11 @@
 @echo off
 
+IF EXIST "%AppData%\SpaceEngineers\Mods" GOTO Skip1
 mkdir "%AppData%\SpaceEngineers\Mods" 2>&1 >NUL
-del /f /s /q "%AppData%\SpaceEngineers\Mods\ModTemplate" 2>&1 >NUL
-rd /s /q "%AppData%\SpaceEngineers\Mods\ModTemplate" 2>&1 >NUL
-mkdir "%AppData%\SpaceEngineers\Mods\ModTemplate" 2>&1 >NUL
+:Skip1
 
-xcopy /s /e /y "%1\Mod\" "%AppData%\SpaceEngineers\Mods\ModTemplate\"
+IF EXIST "%AppData%\SpaceEngineers\Mods\ModTemplate" GOTO Skip2 
+mklink /J "%AppData%\SpaceEngineers\Mods\ModTemplate" "%1\Mod"
+:Skip2
 
 echo Done

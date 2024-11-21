@@ -27,9 +27,17 @@ This is a template repository to build new Space Engineers mods.
 10. Write the code of your mod in the `ModTemplate` project, follow the TODO comments, see tutorials and the source code of other mods as examples
 11. Fill the `SteamDescription.txt` file with the description intended for players (use this when you publish the mod)
 12. Create a good thumbnail image in `Mod/Data/thumb.jpg` (use this when you publish the mod)
-13. Once you have published your mod, copy the `modinfo.sbmi` file from the published mod folder into the `Mod` subdirectory of the `ModTemplate` project and commit it into the repository, so it won't be deleted by deployments  
+13. After you first publish your mod, make sure to commit the `modinfo.sbmi` file created by SE in the `Mod` subdirectory of the `ModTemplate` project to your repository  
 
 _Good luck!_
+
+## Debugging your mod
+
+1. Install the **Mod Debugger** plugin in Plugin Loader
+2. Make sure the `Deploy.bat` worked on building the project, it must create a symlink in `%AppData%\SpaceEngineers\Mods` to the `Mod` folder in your `ModTemplate` project
+3. Run Plugin Loader's `SpaceEngineersLauncher.exe` in debug mode (a run config for Rider is provided)
+4. Load your test world, which has the in-development mod loaded from its local folder
+5. You should be able to set breakpoints in your mod's code now
 
 ## Troubleshooting
 
@@ -60,3 +68,9 @@ Recreate the file from this template, fill the missing IDs accordingly:
 ```
 
 You can get the IDs from the Steam URLs. Your Steam profile link has your Steam ID in it. The link to your mod has an `id` URL parameter.
+
+### The debugger does not stop at my breakpoints
+
+The path of the source file in your IDE must be the same as the path of the same files in your local `%APPDATA%\SpaceEngineers\Mods\ModTemplate` folder.
+
+If they do not match (your copied the source files instead of linking the folder), then the IDE won't be able to pair up the source files, therefore cannot establish the breakpoints in the assembly at runtime.
