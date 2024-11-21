@@ -13,7 +13,7 @@ This is a template repository to build new Space Engineers mods.
 
 \** Python is required only for the project setup. Tested with Python 3.12.
 
-## Create your plugin project
+## Create your project
 
 1. Click on **Use this template** (top right corner on GitHub) and follow the wizard to create your repository
 2. Clone your repository to have a local working copy
@@ -38,6 +38,10 @@ _Good luck!_
 3. Run Plugin Loader's `SpaceEngineersLauncher.exe` in debug mode (a run config for Rider is provided)
 4. Load your test world, which has the in-development mod loaded from its local folder
 5. You should be able to set breakpoints in your mod's code now
+
+Remarks
+- Hot reloading (changing the code on the fly) may work, but is generally unreliable.
+- Debugging is compatible with the mod compilation cache of the Performance Improvements plugin.
 
 ## Troubleshooting
 
